@@ -7,29 +7,155 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
+    <LinearLayout
+        android:id="@+id/liner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Версия"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Название"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Дата выпуска"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Особенности"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:columnCount="4"
+        app:layout_constraintTop_toBottomOf="@+id/liner">
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="1.0" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="нет" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="23.09.2008" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="114dp"
+            android:layout_height="147dp"
+            android:gravity="center"
+            android:text="Первая демонстративная версия, появился магазин приложений Android Market." />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="1.1" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Petit Four" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="09.02.2009" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="113dp"
+            android:layout_height="235dp"
+            android:gravity="center"
+            android:text="	Добавлены кнопки «Show» и «Hide» в меню вызова, поддержка сохранения вложений из MMS, а также функция Voiceover (озвучивание текста на экране)." />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="1.5" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Cupcake" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="27.04.2009" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="113dp"
+            android:layout_height="196dp"
+            android:gravity="center"
+            android:text="	Появились поддержка виджетов и папок на рабочем столе, возможность записи и воспроизведения видео в MPEG-4 и 3GP." />
+    </androidx.gridlayout.widget.GridLayout>
+
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FF0000"
+        android:onClick="Click"
         android:text="НАЗАД"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid"
         app:layout_constraintVertical_bias="0.5"
-        android:onClick="Click"/>
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="О РАЗРАБОТЧИКЕ"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        tools:layout_editor_absoluteX="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
